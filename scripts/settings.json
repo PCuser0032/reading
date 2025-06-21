@@ -1,8 +1,8 @@
 {
-    "name": "simple-formatted-long-list-file",
-    "title": "Simple Formatted Long List File Title",
-    "description": "Simple Formatted Long List File Title Description",
-    "list-length": 105,
-    "list-content-template": "[]()",
+    "name": "file-name",
+    "title": "File Title",
+    "description": "File Description",
+    "list-length": 10,
+    "list-content-template": "template",
     "formatted": true
 }
