@@ -1,0 +1,148 @@
+Ты являешься специалистом в области информационных технологий и разработки программного обеспечения. Одним из основных инструментов, которые ты используешь в работе, является язык программирования Python.
+
+Пожалуйста, напиши консольное приложение для создания/генерации шаблона-заполнителя нумерованного списка для файлов с расширением "*.md".
+
+Значения параметров, необходимые для генерации, извлекаются из JSON-файла "settings.json", который имеет следующую структуру:
+
+{
+    "name": "<file_name>",
+    "title": "<file_title>",
+    "description": "<file_description>",
+    "list-length": <list_length>,
+    "formatted": true | false
+}
+
+Пример 1
+
+Содержимое файла "settings.json":
+
+{
+    "name": "simple-not-formatted-file",
+    "title": "Simple Not Formatted File Title",
+    "description": "Simple Not Formatted File Title Description",
+    "list-length": 15,
+    "formatted": false
+}
+
+Пример генерируемого файла:
+
+```md
+# Simple Not Formatted File Title
+
+## Simple Not Formatted File Title Description
+
+1. []()
+2. []()
+3. []()
+4. []()
+5. []()
+6. []()
+7. []()
+8. []()
+9. []()
+10. []()
+11. []()
+12. []()
+13. []()
+14. []()
+15. []()
+```
+
+Пример 2
+
+Содержимое файла "settings.json":
+
+{
+    "name": "simple-formatted-file",
+    "title": "Simple Formatted File Title",
+    "description": "Simple Formatted File Title Description",
+    "list-length": 15,
+    "formatted": true
+}
+
+Пример генерируемого файла:
+
+```md
+# Simple Formatted File Title
+
+## Simple Formatted File Title Description
+
+ 1. []()
+ 2. []()
+ 3. []()
+ 4. []()
+ 5. []()
+ 6. []()
+ 7. []()
+ 8. []()
+ 9. []()
+10. []()
+11. []()
+12. []()
+13. []()
+14. []()
+15. []()
+```
+
+Пояснение к Примеру 2:
+Перед пунктами списка, начиная с 1 и заканчивая 9, был добавлен один пробел для выравнивания списка.
+
+Пример 3
+
+Содержимое файла "settings.json":
+
+{
+    "name": "simple-formatted-long-list-file",
+    "title": "Simple Formatted Long List File Title",
+    "description": "Simple Formatted Long List File Title Description",
+    "list-length": 105,
+    "formatted": true
+}
+
+Пример генерируемого файла:
+
+```md
+# Simple Formatted Long List File Title
+
+## Simple Formatted Long List File Title Description
+
+
+  1. []()
+  2. []()
+  3. []()
+  4. []()
+  5. []()
+  6. []()
+  7. []()
+  8. []()
+  9. []()
+ 10. []()
+ 11. []()
+ 12. []()
+ 13. []()
+ 14. []()
+ 15. []()
+...
+ 90. []()
+ 91. []()
+ 92. []()
+ 93. []()
+ 94. []()
+ 95. []()
+ 96. []()
+ 97. []()
+ 98. []()
+ 99. []()
+100. []()
+101. []()
+102. []()
+103. []()
+104. []()
+105. []()
+```
+
+Пояснение к Примеру 3:
+Перед пунктами списка, начиная с 1 и заканчивая 9, были добавлены два пробела, а перед пунктами, начиная с 10 и заканчивая 99, был добавлен один пробел для выравнивания списка.
+"Многоточие" в примере служит для сокращения записи и подразумевает пункты списка от 16 до 89.
+
+Общее пояснение к работе программы: список должен быть отформатирован таким образом, чтобы пункты списка были выравнены.
