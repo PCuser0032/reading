@@ -3,5 +3,6 @@
     "title": "Simple Formatted Long List File Title",
     "description": "Simple Formatted Long List File Title Description",
     "list-length": 105,
+    "list-content-template": "[]()",
     "formatted": true
 }
