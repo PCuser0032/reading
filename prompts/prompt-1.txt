@@ -4,6 +4,7 @@
 
 Значения параметров, необходимые для генерации, извлекаются из JSON-файла "settings.json", который имеет следующую структуру:
 
+```json
 {
     "name": "<file_name>",
     "title": "<file_title>",
@@ -11,11 +12,13 @@
     "list-length": <list_length>,
     "formatted": true | false
 }
+```
 
 Пример 1
 
 Содержимое файла "settings.json":
 
+```json
 {
     "name": "simple-not-formatted-file",
     "title": "Simple Not Formatted File Title",
@@ -23,6 +26,7 @@
     "list-length": 15,
     "formatted": false
 }
+```
 
 Пример генерируемого файла:
 
@@ -52,6 +56,7 @@
 
 Содержимое файла "settings.json":
 
+```json
 {
     "name": "simple-formatted-file",
     "title": "Simple Formatted File Title",
@@ -59,6 +64,7 @@
     "list-length": 15,
     "formatted": true
 }
+```
 
 Пример генерируемого файла:
 
@@ -91,6 +97,7 @@
 
 Содержимое файла "settings.json":
 
+```json
 {
     "name": "simple-formatted-long-list-file",
     "title": "Simple Formatted Long List File Title",
@@ -98,6 +105,7 @@
     "list-length": 105,
     "formatted": true
 }
+```
 
 Пример генерируемого файла:
 
